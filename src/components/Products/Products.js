@@ -6,32 +6,38 @@ function Products() {
       {
         id: 1,
         title: "Apple iPhone 14",
-        price: "Rs. 1,00,000"
+        price: "Rs. 1,00,000",
+        img: "https://www.cocomii.com/cdn/shop/collections/iphone-14-pro-finish-unselect-gallery-2-202209.jpg?v=1694671679"
       },
       {
         id: 2,
         title: "Apple iPhone 13",
-        price: "Rs. 70,000"
+        price: "Rs. 70,000",
+        img: "https://www.apple.com/newsroom/images/product/iphone/geo/Apple_iphone13_hero_geo_09142021_inline.jpg.large.jpg"
       },
       {
         id: 3,
         title: "Google Pixel 7",
-        price: "Rs. 50,000"
+        price: "Rs. 50,000",
+        img: "https://www.digitaltrends.com/wp-content/uploads/2022/10/Pixel-7-Black-Back.jpg?fit=3000%2C2000&p=1"
       },
       {
         id: 4,
         title: "Nokia 1100",
-        price: "Rs. 2,000"
+        price: "Rs. 2,000",
+        img: "https://thedealsguru.com/wp-content/uploads/2019/04/nokia-1110-feature-phone-500x500.jpeg"
       },
       {
         id: 5,
         title: "Samsung Galaxy S10",
-        price: "Rs. 1,00,000"
+        price: "Rs. 1,00,000",
+        img: "https://i.gadgets360cdn.com/products/large/1550692389_635_samsung_galaxy_s10.jpg"
       },
       {
         id: 6,
         title: "Sony Xperia S10",
-        price: "Rs. 1,00,000"
+        price: "Rs. 1,00,000",
+        img: "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-10-plus-.jpg"
       }
     ];
   

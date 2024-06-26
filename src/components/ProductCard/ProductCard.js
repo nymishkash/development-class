@@ -15,7 +15,9 @@ function ProductCard({ product }) {
     <div className="product-card">
       <p>{product.title}</p> {/* Display product title */}
       <p>{product.price}</p> {/* Display product price */}
-      <img src={logo1} alt="Product" /> {/* Display product image */}
+      <p>
+      <img src={product.img} alt="Product" height={400}/> {/* Display product image */}
+      </p>
       <input type="text" onChange={handleInputChange} value={inputV} />
       <ReduxAddToCart product={product} />
     </div>
