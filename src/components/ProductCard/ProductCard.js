@@ -1,73 +1,100 @@
+import React, { useState } from 'react';
 import './ProductCard.css';
 import ReduxAddToCart from '../ReduxAddToCart';
-import { useRef, useState } from 'react';
-import logo1 from '../../assests/logo1.png';
-function ProductCard({ product }) {
-  var a = 10;
-  a = a + 1;
-  let pRef = useRef(0);
-  let iRef = useRef(0);
-  let oRef = useRef(0);
-  let [inputV, setInputV] = useState('Class');
-  console.log("pc", product.id)
+import logo1 from '../../assets/logo1.png';
 
-  // setInput(value);
-  function printTitle() {
-    // console.log("printTitle");
-    // console.log(pRef.current.innerText);
-    if (pRef.current.style.display === "none") {
-      pRef.current.style.display = "block";
-    } else {
-      pRef.current.style.display = "none";
-    }
-  }
-  // console.log("Rerendered", inputV);
-  function displayOutput(e) {
-    // console.log(iRef.current);
-    // console.log(oRef.current);
-    // oRef.current.innerText = `Output here: ${ iRef.current.value }`;
-    // oRef.current.innerText = oRef.current.innerText + iRef.current.value;
+function ProductCard({ product }) {
+  let [inputV, setInputV] = useState(''); // Initialize inputV state
+
+  // Update inputV state on input change
+  const handleInputChange = (e) => {
     setInputV(e.target.value);
-  }
+  };
 
   return (
     <div className="product-card">
-      <p onClick={printTitle}> {product.title}</p>
-      <p ref={pRef}> {product.price.value}</p>
-      <img src={logo1} />
-      <input type="text" onChange={displayOutput} ref={iRef} value={inputV} />
-      <p ref={oRef}>Over here the output would arrive - {inputV}</p>
+      <p>{product.title}</p> {/* Display product title */}
+      <p>{product.price}</p> {/* Display product price */}
+      <img src={logo1} alt="Product" /> {/* Display product image */}
+      <input type="text" onChange={handleInputChange} value={inputV} />
       <ReduxAddToCart product={product} />
     </div>
-    )
-  }
-  
+  );
+}
+
 export default ProductCard;
+
+
+// import './ProductCard.css';
+// import ReduxAddToCart from '../ReduxAddToCart';
+// import { useRef, useState } from 'react';
+// import logo1 from '../../assests/logo1.png';
+// function ProductCard({ product }) {
+//   var a = 10;
+//   a = a + 1;
+//   let pRef = useRef(0);
+//   let iRef = useRef(0);
+//   let oRef = useRef(0);
+//   let [inputV, setInputV] = useState('Class');
+//   console.log("pc", product.id)
+
+//   // setInput(value);
+//   function printTitle() {
+//     // console.log("printTitle");
+//     // console.log(pRef.current.innerText);
+//     if (pRef.current.style.display === "none") {
+//       pRef.current.style.display = "block";
+//     } else {
+//       pRef.current.style.display = "none";
+//     }
+//   }
+//   // console.log("Rerendered", inputV);
+//   function displayOutput(e) {
+//     // console.log(iRef.current);
+//     // console.log(oRef.current);
+//     // oRef.current.innerText = `Output here: ${ iRef.current.value }`;
+//     // oRef.current.innerText = oRef.current.innerText + iRef.current.value;
+//     setInputV(e.target.value);
+//   }
+
+//   return (
+//     <div className="product-card">
+//       <p onClick={printTitle}> {product.title}</p>
+//       <p ref={pRef}> {product.price.value}</p>
+//       <img src={logo1} />
+//       <input type="text" onChange={displayOutput} ref={iRef} value={inputV} />
+//       <p ref={oRef}>Over here the output would arrive - {inputV}</p>
+//       <ReduxAddToCart product={product} />
+//     </div>
+//     )
+//   }
+  
+// export default ProductCard;
   
 
-//ProductCard()
+// //ProductCard()
 
-// useState
-// useRef
-// useEffect
+// // useState
+// // useRef
+// // useEffect
 
-// custom hooks 
-// default hooks
-// they should not render a ui 
-// they should be on the top of a function 
-// they should be not in any conditon or loops 
-
-
-
-// state variable = 
-// whenver a state variable is set it would cause a rerender of the component
-// and the value of the variable would be retained on rerenders
-
-// function or component is called for the first time 
-// Mounting
-
-// useState(default value)
-// returns [stateVar, setterFn];
+// // custom hooks 
+// // default hooks
+// // they should not render a ui 
+// // they should be on the top of a function 
+// // they should be not in any conditon or loops 
 
 
-// useEffect(fn, [])
+
+// // state variable = 
+// // whenver a state variable is set it would cause a rerender of the component
+// // and the value of the variable would be retained on rerenders
+
+// // function or component is called for the first time 
+// // Mounting
+
+// // useState(default value)
+// // returns [stateVar, setterFn];
+
+
+// // useEffect(fn, [])
